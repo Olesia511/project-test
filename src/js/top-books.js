@@ -4,6 +4,7 @@ const container = document.querySelector('.container-best-books');
 
 async function topBooksRequest() {
   container.classList.add('loader');
+
   await getTopBooksArr()
     .then(res => {
       const nameCategory = res
