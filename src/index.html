@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://unpkg.com/body-scroll-lock"></script>
+    <script type="module" src="/main.js"></script>
+  </head>
+
+  <body>
+    <load ="partials/header.html" />
+
+    <main class="main-container">
+      <div class="container-basic">
+        <div class="container-categories-support">
+          <load ="partials/categories-list.html" />
+          <load ="partials/support-ukraine.html" />
+        </div>
+
+        <div class="container-book">
+          <load ="partials/markup-by-category.html" />
+          <load ="partials/top-books.html" />
+        </div>
+      </div>
+      <load ="partials/modal.html" />
+    </main>
+  </body>
+</html>

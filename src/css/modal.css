@@ -1,0 +1,423 @@
+.cover-wrap:hover .cover-text,
+.cover-wrap:focus .cover-text {
+  transform: translateY(0);
+}
+
+.cover-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.cover-text {
+  position: absolute;
+  pointer-events: none;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  padding: 26px 52px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+  text-align: center;
+  border-radius: 0px 0px 8px 8px;
+  font-family: 'DM Sans';
+  text-transform: uppercase;
+  color: #111;
+  background-color: #eac645;
+  transform: translateY(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.disasble-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.backdrop {
+  z-index: 1000;
+  overflow: scroll;
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 17, 17, 0.4);
+  top: 0;
+  /* overflow: hidden; */
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cover-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 335px;
+  height: 485px;
+}
+
+.cover-wrap:hover .cover-text {
+  transform: translateY(0);
+}
+
+.modal {
+  position: relative;
+  opacity: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  justify-content: center;
+  max-width: 335px;
+  margin: 20px auto 0 auto;
+  background-color: var(--primary-text-color-dark-theme);
+
+  padding: 40px 24px;
+  width: calc(100% - 10px);
+  border-radius: 18px;
+  border: 2px solid #111;
+  overflow: hidden;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+body.dark .modal {
+  background-color: var(--black-color);
+  color: var(--primary-text-color-dark-theme);
+}
+
+.backdrop.is-hidden .modal {
+  transform: scaleY(0);
+}
+
+.close-btn-modal {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 12px;
+  right: 12px;
+  background-color: transparent;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-close-modal {
+  stroke: #111;
+}
+body.dark .icon-close-modal {
+  stroke: var(--primary-text-color-dark-theme);
+}
+
+.icon-close-modal:hover,
+.icon-close-modal:focus {
+  stroke: #4f2ee8;
+}
+
+.cover-modal {
+  width: 287px;
+  height: 408px;
+}
+
+.img-book {
+  margin-top: 4px;
+  width: 287px;
+  height: 408px;
+}
+
+.title-book {
+  color: inherit;
+  margin-top: 14px;
+  font-family: 'DM Sans';
+  font-size: 16px;
+  line-height: 1.13;
+  letter-spacing: -0.64px;
+}
+
+.author-book {
+  color: #b4afaf;
+  margin-top: 4px;
+  font-family: 'DM Sans';
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: -0.48px;
+}
+
+.descr-book {
+  color: inherit;
+  height: 70px;
+  width: 279px;
+  margin-top: 18px;
+  font-family: 'DM Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+  height: auto;
+}
+
+.modal-img-list {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.img-modal-amazon {
+  width: 62px;
+  height: 19px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('../img/shop-logo-amazon.png');
+
+  filter: grayscale(100%);
+}
+
+body.dark .img-modal-amazon {
+  filter: brightness(0) invert(1);
+}
+
+.hover-img {
+  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.dark .hover-img {
+  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.dark .hover-img:hover,
+body.dark .hover-img:focus {
+  filter: grayscale(100%) drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+}
+
+.hover-img:hover,
+.hover-img:focus {
+  filter: grayscale(100%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+.img-modal-bookshop {
+  width: 33px;
+  height: 32px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('../img/shop-logo.png');
+
+  filter: grayscale(100%);
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .img-modal-amazon {
+    background-image: url('../img/shop-logo-amazon-2x.png');
+  }
+
+  .img-modal-bookshop {
+    background-image: url('../img/shop-logo-2x.png');
+  }
+}
+
+.add-books-backend {
+  margin-bottom: 44px;
+}
+
+.add-local {
+  padding: 14px 28px;
+}
+
+.remove-local {
+  padding: 14px 23px;
+}
+
+.btn-add-local {
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 211px;
+
+  height: 46px;
+  background-color: transparent;
+  border-radius: 40px;
+  border: 2px solid #4f2ee8;
+  font-family: inherit;
+  color: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.14px;
+  text-transform: uppercase;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-off {
+  display: none;
+}
+
+.btn-add-local:hover,
+.btn-add-local:focus {
+  background-color: #4f2ee8;
+  color: #fff;
+}
+
+.text-modal {
+  color: inherit;
+  text-align: center;
+  font-family: 'DM Sans';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+.text-box {
+  width: 242px;
+
+  margin: 8px auto 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    display: block;
+    gap: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(1);
+    max-width: 579px;
+    min-height: 465px;
+    padding: 40px;
+  }
+
+  .cover-wrap {
+    height: 316px;
+    width: 218px;
+  }
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scaleY(0);
+  }
+
+  .icon-close-modal {
+    width: 28px;
+    height: 28px;
+  }
+
+  .close-btn-modal {
+    width: 28px;
+    height: 28px;
+    top: 24px;
+    right: 24px;
+  }
+
+  .add-books-backend {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .backend-box {
+    display: flex;
+    gap: 24px;
+  }
+
+  .title-book {
+    width: 250px;
+    font-size: 24px;
+    margin: 0;
+    line-height: 1.17;
+    letter-spacing: -0.96px;
+  }
+
+  .author-book {
+    font-size: 14px;
+
+    line-height: 1.29;
+    letter-spacing: -0.56px;
+  }
+
+  .cover-modal {
+    width: 192px;
+    height: 281px;
+  }
+
+  .add-books-backend {
+    margin-bottom: 40px;
+  }
+
+  .img-book {
+    margin-top: 0;
+    min-width: 192px;
+    height: 281px;
+  }
+
+  .text-modal {
+    font-size: 12px;
+
+    line-height: 1.7;
+    letter-spacing: -0.48px;
+  }
+
+  .modal-img-list {
+    margin-top: 20px;
+  }
+
+  .add-local {
+    padding: 20px 149px;
+  }
+
+  .remove-local {
+    padding: 20px 100px;
+  }
+
+  .btn-add-local {
+    width: 499px;
+    height: 64px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  .text-modal {
+    letter-spacing: -0.48px;
+  }
+
+  .text-box {
+    width: 324px;
+    margin: 8px auto 0px auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .cover-wrap {
+    width: 180px;
+    height: 256px;
+  }
+}

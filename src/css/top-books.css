@@ -1,0 +1,234 @@
+body,
+.header-container,
+.title {
+  transition: fill var(--transition-time),
+    background-color var(--transition-time);
+}
+
+.highlighted-text {
+  color: var(--violet-color);
+}
+
+.top-books-box {
+  width: 335px;
+  /* padding: 0 20px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category-container {
+  width: 335px;
+  margin-bottom: 8px;
+}
+
+.title {
+  /* color: var(--primary-text-color-light-theme); */
+  font-family: DM Sans;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.19; /* 118.75% */
+  letter-spacing: -1.28px;
+  margin-bottom: 40px;
+}
+
+.book-list {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.book-list > li:not(:first-child) {
+  display: none;
+}
+
+.book-item {
+  width: 335px;
+  height: 535px;
+}
+
+.book-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: url(<path-to-image>),
+    lightgray -4.635px -16px / 102.522% 106.839% no-repeat;
+}
+
+.title-author-container {
+  display: flex;
+  flex-direction: column;
+  height: 36px;
+}
+
+.book-title {
+  /* color: var(--primary-text-color-light-theme); */
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.12; /* 112.5% */
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  max-width: 176px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.category-title {
+  color: #b4afaf;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.28; /* 128.571% */
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.author {
+  color: #b4afaf;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.17; /* 116.667% */
+  letter-spacing: -0.48px;
+}
+
+.see-more-btn {
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #fff;
+  padding: 14px 28px;
+  border-radius: 40px;
+  border: 2px solid #4f2ee8;
+  /* margin-bottom: 40px; */
+  margin-left: 62%;
+  white-space: nowrap;
+  transition: background-color 275ms ease;
+}
+body.dark .see-more-btn {
+  background-color: transparent;
+  color: #fff;
+}
+.see-more-btn:hover,
+.see-more-btn:focus {
+  background-color: #4f2ee8;
+  color: #ffffff;
+  /* background-color: 0 100%; */
+}
+
+body.dark .see-more-btn:hover,
+body.dark .see-more-btn:focus {
+  background-color: #4f2ee8;
+  color: #ffffff;
+  /* background-color: 0 100%; */
+}
+
+@media screen and (min-width: 768px) {
+  .top-books-box {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 704px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .category-container {
+    width: 704px;
+    height: 474px;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    /* color: var(--primary-text-color-light-theme); */
+    font-size: 48px;
+  }
+
+  .book-list {
+    display: flex;
+    align-items: flex-end;
+    width: 704px;
+    height: 366px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+    gap: 25px;
+  }
+
+  .category-title {
+    line-height: 1.71; /* 171.429% */
+  }
+
+  .book-list > li:not(:last-child) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .book-list > li:nth-child(n + 4) {
+    display: flex;
+  }
+
+  .book-list > li:not(:nth-child(-n + 3)) {
+    display: none;
+  }
+
+  .book-item {
+    width: 218px;
+    height: 366px;
+  }
+
+  .book-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .see-more-btn {
+    margin-left: 82%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .top-books-box {
+    width: 996px;
+  }
+
+  .category-container {
+    width: 996px;
+    height: 426px;
+  }
+
+  .book-list {
+    width: 996px;
+    height: 306px;
+    margin-bottom: 32px;
+    gap: 24px;
+  }
+
+  .book-list > li:nth-child(n + 3) {
+    display: flex;
+  }
+  .book-list > li:last-child {
+    flex-wrap: wrap;
+  }
+  .book-item {
+    width: 180px;
+    height: 306px;
+  }
+
+  .book-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .see-more-btn {
+    margin-left: 87.5%;
+  }
+}

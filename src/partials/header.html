@@ -1,0 +1,99 @@
+<header>
+  <div class="header-container">
+    <a href="./index.html" class="header-logo-link">
+      <svg class="header-logo-icon">
+        <use href="./img/icon.svg#icon-logo"></use>
+      </svg>
+      Bookshelf
+    </a>
+
+    <nav class="navigation">
+      <ul class="site-nav">
+        <li class="site-nav-item-home active">
+          <a href="./index.html" class="home-link">Home</a>
+        </li>
+
+        <li class="site-nav-item-shop">
+          <a href="./shopping-list.html" class="shopping-link">
+            Shopping list
+            <svg class="basket-icon">
+              <use href="./img/icon.svg#basket"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <label class="toggle-theme js-common-toggle">
+      <input type="checkbox" />
+      <span class="check"></span>
+    </label>
+
+    <button type="button" class="burger-menu js-open-menu">
+      <svg class="menu-burger-icon" width="28px" height="28px">
+        <use href="./img/icon.svg#menu-burger"></use>
+      </svg>
+      <svg
+        class="icon-close-burger is-hidden-burger"
+        width="28px"
+        height="28px"
+      >
+        <use href="./img/icon.svg#icon-x-close"></use>
+      </svg>
+    </button>
+
+    <button class="sign-up-button" type="button">
+      <span class="sign-up-btn-text">Sign up</span>
+      <svg class="sign-up-icon" width="20px" height="20px">
+        <use href="./img/icon.svg#sign-up-icon"></use>
+      </svg>
+    </button>
+  </div>
+
+  <!--  mobile -->
+
+  <div class="backdrop-header is-hidden-mobile">
+    <div class="mob-menu js-menu-container container-basic">
+      <div class="mob-logo-menu">
+        <div class="nav-heder">
+          <a href="./index.html">
+            <svg class="icon-logo" width="16px" height="16px">
+              <use href="./img/icon.svg#icon-logo"></use>
+            </svg>
+          </a>
+          <a class="logo-link" href="./index.html">Bookshelf</a>
+        </div>
+        <button type="button" class="mob-menu-close js-close-menu">
+          <svg class="icon-close-mobile" width="24px" height="24px">
+            <use href="./img/icon.svg#icon-x-close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-nav">
+        <ul class="mobile-list">
+          <li class="mobile-item active home-target">
+            <a class="mobile-link js-close-menu" href="./index.html">Home</a>
+          </li>
+
+          <li class="mobile-item shop-target">
+            <a class="mobile-link js-close-menu" href="./shopping-list.html"
+              >Shopping list
+              <svg class="basket-icon-mob">
+                <use href="./img/icon.svg#basket"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <button class="log-out-btn" type="button">
+          <span class="log-out-text">Log out</span>
+
+          <svg class="log-out-icon" width="20px" height="20px">
+            <use href="./img/icon.svg#icon-arrow-narrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <script type="module" src="./js/menu-active.js"></script>
+    <script type="module" src="./js/shopping-list.js"></script>
+    <script type="module" src="./js/support-ukraine.js"></script>
+    <script type="module" src="./js/header.js"></script>
+  </head>
+
+  <body>
+    <!------    Header    ------->
+    <load ="partials/header.html" />
+
+    <main class="main-container">
+      <div class="shop-list-page container-basic">
+        <div class="sidebar">
+          <load ="partials/support-ukraine.html" />
+        </div>
+        <section class="shopping-list">
+          <h1 class="shop-list-titel">Shopping <span>List</span></h1>
+
+          <div class="shop-list-placeholder container-book">
+            <p class="shop-list-placeholder-text">
+              This page is empty, add some books and proceed to order.
+            </p>
+            <picture>
+              <source
+                srcset="
+                  ./img/shop-list-desktop.webp    1x,
+                  ./img/shop-list-desktop-2x.webp 2x
+                "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="
+                  ./img/shop-list-tabl.webp    1x,
+                  ./img/shop-list-tabl-2x.webp 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./img/shop-list-mob.webp    1x,
+                  ./img/shop-list-mob-2x.webp 2x
+                "
+                media="(max-width: 767px)"
+              />
+              <img
+                class="shop-list-placeholder-img"
+                src="./img/shop-list-mob.png"
+                alt="books"
+              />
+            </picture>
+          </div>
+
+          <ul class="shop-list-list"></ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
